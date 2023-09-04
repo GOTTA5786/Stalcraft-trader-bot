@@ -41,8 +41,7 @@ def testScroll():
                     match = False
                 else:
                     stage += 1
-        print('END OF PAGE')
-    print('DONE')
+                    
 def imageRecognition(Simage, Limage):
     method = cv2.TM_SQDIFF_NORMED
 
@@ -163,7 +162,6 @@ def searchOnPage(desiredPrice,itemName):
                 cursorX2 = priceX+60
                 cursorY1 = (priceY + (STEP_FOR_PRICE * (i + 1)))+8
                 cursorY2 = (priceY + (STEP_FOR_PRICE * (i + 1)))+20
-                print('DOLBOEB',filteredPrice,filteredAmount,coeff,itemName,i)
                 pyautogui.moveTo(random.randint(cursorX1, cursorX2), random.randint(cursorY1, cursorY2), random.uniform(0.2, 0.4))
                 click()
                 return True
